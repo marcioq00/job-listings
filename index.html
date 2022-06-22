@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -29,6 +28,7 @@
         color: hsl(228, 45%, 44%);
       }
     </style>
+    <script src="js/index.js" defer></script>
   </head>
   <body>
     <div id="container">
@@ -54,12 +54,14 @@
                 </p>
               </div>
             </div>
-            <div class="card-tags">
-              <button class="job-tag">Frontend</button>
-              <button class="job-tag">Senior</button>
-              <button class="job-tag">HTML</button>
-              <button class="job-tag">CSS</button>
-              <button class="job-tag">JavaScript</button>
+            <div class="card-tags" id="photosnap">
+              <button class="job-tag" data-role="frontend">Frontend</button>
+              <button class="job-tag" data-level="senior">Senior</button>
+              <button class="job-tag" data-languages="html">HTML</button>
+              <button class="job-tag" data-languages="css">CSS</button>
+              <button class="job-tag" data-languages="javascript">
+                JavaScript
+              </button>
             </div>
           </div>
           <div class="jobItem">
@@ -82,10 +84,10 @@
               </div>
             </div>
             <div class="card-tags">
-              <button class="job-tag">Fullstack</button>
-              <button class="job-tag">Midweight</button>
-              <button class="job-tag">Python</button>
-              <button class="job-tag">React</button>
+              <button class="job-tag" data-role="fullstack">Fullstack</button>
+              <button class="job-tag" data-level="midweight">Midweight</button>
+              <button class="job-tag" data-languages="python">Python</button>
+              <button class="job-tag" data-tools="react">React</button>
             </div>
           </div>
           <div class="jobItem">
@@ -107,11 +109,13 @@
               </div>
             </div>
             <div class="card-tags">
-              <button class="job-tag">Frontend</button>
-              <button class="job-tag">Junior</button>
-              <button class="job-tag">React</button>
-              <button class="job-tag">Sass</button>
-              <button class="job-tag">JavaScript</button>
+              <button class="job-tag" data-role="frontend">Frontend</button>
+              <button class="job-tag" data-level="junior">Junior</button>
+              <button class="job-tag" data-tools="react">React</button>
+              <button class="job-tag" data-tools="sass">Sass</button>
+              <button class="job-tag" data-languages="javascript">
+                JavaScript
+              </button>
             </div>
           </div>
           <div class="jobItem">
@@ -132,12 +136,12 @@
               </div>
             </div>
             <div class="card-tags">
-              <button class="job-tag">Frontend</button>
-
-              <button class="job-tag">Junior</button>
-
-              <button class="job-tag">CSS</button>
-              <button class="job-tag">JavaScript</button>
+              <button class="job-tag" data-role="frontend">Frontend</button>
+              <button class="job-tag" data-level="junior">Junior</button>
+              <button class="job-tag" data-languages="css">CSS</button>
+              <button class="job-tag" data-languages="javascript">
+                JavaScript
+              </button>
             </div>
           </div>
           <div class="jobItem">
@@ -158,13 +162,13 @@
               </div>
             </div>
             <div class="card-tags">
-              <button class="job-tag">Fullstack</button>
-
-              <button class="job-tag">Midweight</button>
-
-              <button class="job-tag">JavaScript</button>
-              <button class="job-tag">Sass</button>
-              <button class="job-tag">Ruby</button>
+              <button class="job-tag" data-role="fullstack">Fullstack</button>
+              <button class="job-tag" data-level="midweight">Midweight</button>
+              <button class="job-tag" data-languages="javascript">
+                JavaScript
+              </button>
+              <button class="job-tag" data-tools="sass">Sass</button>
+              <button class="job-tag" data-languages="ruby">Ruby</button>
             </div>
           </div>
           <div class="jobItem">
@@ -185,10 +189,10 @@
               </div>
             </div>
             <div class="card-tags">
-              <button class="job-tag">Backend</button>
-              <button class="job-tag">Junior</button>
-              <button class="job-tag">Ruby</button>
-              <button class="job-tag">RoR</button>
+              <button class="job-tag" data-role="backend">Backend</button>
+              <button class="job-tag" data-level="junior">Junior</button>
+              <button class="job-tag" data-languages="ruby">Ruby</button>
+              <button class="job-tag" data-tools="ror">RoR</button>
             </div>
           </div>
           <div class="jobItem">
@@ -209,11 +213,13 @@
               </div>
             </div>
             <div class="card-tags">
-              <button class="job-tag">Frontend</button>
-              <button class="job-tag">Junior</button>
-              <button class="job-tag">HTML</button>
-              <button class="job-tag">Sass</button>
-              <button class="job-tag">JavaScript</button>
+              <button class="job-tag" data-role="frontend">Frontend</button>
+              <button class="job-tag" data-level="junior">Junior</button>
+              <button class="job-tag" data-languages="html">HTML</button>
+              <button class="job-tag" data-tools="sass">Sass</button>
+              <button class="job-tag" data-languages="javascript">
+                JavaScript
+              </button>
             </div>
           </div>
           <div class="jobItem">
@@ -234,10 +240,12 @@
               </div>
             </div>
             <div class="card-tags">
-              <button class="job-tag">Frontend</button>
-              <button class="job-tag">Junior</button>
-              <button class="job-tag">Vue</button>
-              <button class="job-tag">JavaScript</button>
+              <button class="job-tag" data-role="frontend">Frontend</button>
+              <button class="job-tag" data-level="junior">Junior</button>
+              <button class="job-tag" data-tools="vue">Vue</button>
+              <button class="job-tag" data-languages="javascript">
+                JavaScript
+              </button>
               <button class="job-tag">Sass</button>
             </div>
           </div>
@@ -259,11 +267,13 @@
               </div>
             </div>
             <div class="card-tags">
-              <button class="job-tag">Fullstack</button>
-              <button class="job-tag">Midweight</button>
-              <button class="job-tag">JavaScript</button>
-              <button class="job-tag">Django</button>
-              <button class="job-tag">Python</button>
+              <button class="job-tag" data-role="fullstack">Fullstack</button>
+              <button class="job-tag" data-level="midweight">Midweight</button>
+              <button class="job-tag" data-languages="javascript">
+                JavaScript
+              </button>
+              <button class="job-tag" data-tools="django">Django</button>
+              <button class="job-tag" data-languages="python">Python</button>
             </div>
           </div>
           <div class="jobItem">
@@ -287,14 +297,13 @@
               </div>
             </div>
             <div class="card-tags">
-              <!-- Role -->
-              <button class="job-tag">Frontend</button>
-              <!-- Level -->
-              <button class="job-tag">Junior</button>
-              <!-- Languages -->
-              <button class="job-tag">React</button>
-              <button class="job-tag">Sass</button>
-              <button class="job-tag">JavaScript</button>
+              <button class="job-tag" data-role="frontend">Frontend</button>
+              <button class="job-tag" data-level="junior">Junior</button>
+              <button class="job-tag" data-tools="react">React</button>
+              <button class="job-tag" data-tools="sass">Sass</button>
+              <button class="job-tag" data-languages="javascript">
+                JavaScript
+              </button>
             </div>
           </div>
         </div>

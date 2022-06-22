@@ -28,9 +28,7 @@ body {
   height: 100%;
   width: 100%;
   max-width: 1110px;
-  /* margin: 0 auto; */
   display: flex;
-  /* flex-wrap: wrap;*/
   flex-direction: column;
   gap: 40px;
 }
@@ -43,6 +41,8 @@ body {
   width: 100%;
   height: 150px;
   border-radius: 5px;
+  box-shadow: 0 15px 15px -4px hsl(180deg 29% 50% / 20%);
+  padding-right: 40px;
 }
 .jobItem:nth-child(1),
 .jobItem:nth-child(2) {
@@ -52,8 +52,6 @@ body {
 .companyLogo {
   position: relative;
   display: flex;
-  /* align-items: center;
-  justify-content: center; */
   width: 12%;
   height: 100%;
 }
@@ -77,9 +75,10 @@ body {
 .card-tags {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   width: 48%;
   height: 100%;
+  padding-left: 80px;
 }
 .job-tag {
   color: hsl(180, 29%, 50%);
@@ -109,30 +108,31 @@ body {
 .new-tag {
   margin-left: 10px;
   margin-right: 5px;
-  font-size: 0.8em;
+  font-size: 0.85em;
+  font-weight: bold;
   color: #fff;
   display: inline;
   background-color: hsl(180, 29%, 50%);
   text-transform: uppercase;
   vertical-align: middle;
   text-align: center;
-  padding: 4px 7px 4px 7px;
+  padding: 6px 9px 5px 9px;
   border-radius: 10px;
 }
 .feature-tag {
-  font-size: 0.8em;
+  font-size: 0.85em;
+  font-weight: bold;
   color: #fff;
   display: inline;
   text-transform: uppercase;
   vertical-align: middle;
   text-align: center;
   background-color: hsl(180, 14%, 20%);
-  padding: 4px 7px 4px 7px;
+  padding: 6px 9px 5px 9px;
   border-radius: 10px;
 }
 .middle {
   height: 33%;
-  /* background-color: blueviolet; */
 }
 .position {
   margin-left: 20px;
@@ -145,12 +145,117 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
+.position:hover {
+  cursor: pointer;
+  color: hsl(180, 29%, 50%);
+}
 .information {
   font-size: 1.2em;
   margin-left: 20px;
   width: 100%;
   display: block;
-  /* background-color: red; */
   color: hsl(180, 8%, 52%);
   opacity: 0.8;
+}
+@media (max-width: 1300px) {
+  .main {
+    height: 100%;
+    width: 100%;
+    max-width: 800px;
+  }
+  .jobItem {
+    min-width: 780px;
+  }
+  .card-tags {
+    flex-wrap: wrap;
+    height: 70%;
+  }
+  .job-tag {
+    margin: 5px;
+  }
+  .companyLogo {
+    width: 16%;
+    height: 100%;
+  }
+  .card-details {
+    width: 40%;
+    height: 100%;
+  }
+  .card-tags {
+    width: 44%;
+  }
+}
+@media (max-width: 860px) {
+  .header {
+    background-image: url("../images/bg-header-mobile.svg");
+  }
+  .main {
+    height: 100%;
+    width: 100%;
+    max-width: 500px;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .jobItem {
+    min-width: 240px;
+    max-width: 350px;
+    width: 100%;
+    height: 250px;
+    padding: 0 10px;
+    flex-direction: column;
+  }
+  .card-tags {
+    border-top: 1px solid hsl(180, 8%, 52%);
+    height: 46%;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 10px 20px 20px 5px;
+    margin: 0;
+  }
+  .job-tag {
+    padding: 10px;
+    margin-right: 10px;
+  }
+  .companyLogo {
+    width: 100%;
+    height: 2%;
+  }
+  .companyLogo img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 82%;
+    top: -10%;
+    z-index: 1;
+  }
+  .card-details {
+    width: 100%;
+    height: 52%;
+    padding: 0;
+  }
+  .company {
+    font-size: 1.1em;
+    color: hsl(180, 29%, 50%);
+    display: inline-block;
+    margin-left: 12px;
+  }
+  .new-tag {
+    font-size: 0.8em;
+  }
+  .feature-tag {
+    font-size: 0.8em;
+  }
+  .middle {
+    margin-top: 10px;
+  }
+  .position {
+    font-size: 1.2em;
+    margin-left: 12px;
+  }
+  .information {
+    font-size: 1.1em;
+    margin-left: 12px;
+  }
 }
